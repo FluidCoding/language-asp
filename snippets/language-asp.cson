@@ -8,6 +8,9 @@
   'If … End if':
     'prefix': 'ifelse'
     'body': 'If ${1:condition} Then\n\t${2:\' true}\nElse\n\t${3:\' false}\nEnd if'
+  'Select … Case':
+    'prefix': 'Select'
+    'body': 'Select ${1:var}\n\tCase ${2:state}\n\t${3: \' state}\n\tCase Else\n\t\${4: \' else}\nEnd Select'
   'While … Wend':
     'prefix': 'while'
     'body': 'While ${1:NOT ${2:condition}}\n\t${3:\' body}\nWend'
@@ -29,3 +32,9 @@
   'Session("…")':
     'prefix': 'sess'
     'body': 'Session("${1:whatever}")'
+  'Sub … End Sub':
+    'prefix': 'Sub'
+    'body': 'Sub ${1:S}\n\t\'body\nEnd Sub'
+  'Function … End Function':
+    'prefix': 'Function'
+    'body': 'Function ${1:F}\n\t\'body\nEnd Function'
