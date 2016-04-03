@@ -52,4 +52,4 @@
     'body': 'Set oRS Server.Createobject("ADODB.Recordset")'
   'SQLRecordSet':
     'prefix': 'SQLRecord'
-    'body': 'SQLStr = "SELECT FROM "\nSQLStr = SQLStr & " WHERE "\nSet oRS = Server.Createobject("ADODB.Recordset")\noRS.Open SQLStr,"DSN=",1,2\nIf Not oRS.EOF Then\n\t\'body\nEnd If\noRS.Close\nSet oRS = Nothing'
+    'body': 'SQLStr = "SELECT * FROM tbl"\nSQLStr = SQLStr & " WHERE 1=2"\nSet oRS = Server.Createobject("ADODB.Recordset")\noRS.Open SQLStr,"DSN=",1,2\nIf Not oRS.EOF Then\n\t\'body\nEnd If\noRS.Close\nSet oRS = Nothing'
