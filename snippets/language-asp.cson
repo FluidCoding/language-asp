@@ -5,6 +5,9 @@
   'For … in … Next':
     'prefix': 'forin'
     'body': 'For ${1:var} in ${2:array}\n\t${3:\' body}\nNext'
+  'For … To … Next':
+    'prefix': 'forto'
+    'body': 'For ${1:i} To ${2:n}\n\t\' body\nNext'
   'If … End if':
     'prefix': 'ifelse'
     'body': 'If ${1:condition} Then\n\t${2:\' true}\nElse\n\t${3:\' false}\nEnd if'
@@ -38,3 +41,15 @@
   'Function … End Function':
     'prefix': 'Function'
     'body': 'Function ${1:F}\n\t\'body\nEnd Function'
+  'Read File':
+    'prefix': 'ReadFile'
+    'body': 'Set fSys = Server.CreateObject("Scripting.FileSystemObject")\nSet fStr = fSys.OpenTextFile(${1:path}, 1)\n\tdata = fStr.ReadAll\nStr.Close\nSet fStr = Nothing\nSet fSys = Nothing'
+  'Execute File':
+    'prefix': 'Execute File'
+    'body': 'Set fSys = Server.CreateObject("Scripting.FileSystemObject")\nSet fStr = fSys.OpenTextFile(${1:path}, 1)\n\tdata = fStr.ReadAll\nStr.Close\nSet fStr = Nothing\nSet fSys = Nothing\nExecute data'
+  'RecordSet':
+    'prefix': 'RecordSet'
+    'body': 'Set oRS Server.Createobject("ADODB.Recordset")'
+  'SQLRecordSet':
+    'prefix': 'SQLRecord'
+    'body': 'SQLStr = "SELECT FROM "\nSQLStr = SQLStr & " WHERE "\nSet oRS = Server.Createobject("ADODB.Recordset")\noRS.Open SQLStr,"DSN=",1,2\nIf Not oRS.EOF Then\n\t\'body\nEnd If\noRS.Close\nSet oRS = Nothing'
