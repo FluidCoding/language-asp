@@ -1,11 +1,16 @@
 {
-  "name": "language-asp",
+  "name": "language-asp-classic",
   "version": "1.2.0",
-  "description": "Classic ASP language support",
-  "repository": "https://github.com/Trickierstinky/language-asp",
+  "description": "Atom ASP Classic Grammar and Snippets",
+  "repository": "https://github.com/FluidCoding/language-asp.git",
   "license": "MIT",
   "engines": {
     "atom": ">0.50.0"
   },
+  "readme": "Adds improved Grammar definitions and snippets for classic ASP files into Atom.)\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/FluidCoding/language-asp/issues"
+  }
   "dependencies": {}
 }
